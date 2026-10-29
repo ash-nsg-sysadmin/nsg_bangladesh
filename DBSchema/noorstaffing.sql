@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2026 at 03:25 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Oct 29, 2026 at 12:03 PM
+-- Server version: 10.11.16-MariaDB
+-- PHP Version: 8.3.36
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,7 +92,7 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`id`, `role_id`, `full_name`, `email`, `password_hash`, `status`, `last_login_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'System Super Admin', 'admin@noorstaffing.com', '$2y$10$MZb47ycoHPPSq8GgjKKKg.BobeLtcb7REmJbGilQj3VTGcElT3Fhi', 'active', '2026-10-28 19:17:10', '2026-10-27 19:48:11', '2026-10-28 13:17:10');
+(1, 1, 'System Super Admin', 'admin@noorstaffing.com', '$2y$10$MZb47ycoHPPSq8GgjKKKg.BobeLtcb7REmJbGilQj3VTGcElT3Fhi', 'active', '2026-10-29 16:05:31', '2026-10-27 19:48:11', '2026-10-29 10:05:31');
 
 -- --------------------------------------------------------
 
@@ -313,7 +313,40 @@ INSERT INTO `analytics_visits` (`id`, `page_url`, `ip_hash`, `user_agent`, `refe
 (196, '/nsg/index.php', '1cc2b089f4429445ca7abc6c442db8cb65c04641fdb8d325f0e601bd1fdfccfb', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'http://localhost/nsg/careers.php', '2026-10-28 14:21:45'),
 (197, '/nsg/careers.php', '1cc2b089f4429445ca7abc6c442db8cb65c04641fdb8d325f0e601bd1fdfccfb', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'http://localhost/nsg/index.php', '2026-10-28 14:22:13'),
 (198, '/nsg/index.php', '1cc2b089f4429445ca7abc6c442db8cb65c04641fdb8d325f0e601bd1fdfccfb', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'http://localhost/nsg/careers.php', '2026-10-28 14:22:16'),
-(199, '/nsg/index.php', '1cc2b089f4429445ca7abc6c442db8cb65c04641fdb8d325f0e601bd1fdfccfb', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'http://localhost/nsg/careers.php', '2026-10-28 14:23:04');
+(199, '/nsg/index.php', '1cc2b089f4429445ca7abc6c442db8cb65c04641fdb8d325f0e601bd1fdfccfb', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'http://localhost/nsg/careers.php', '2026-10-28 14:23:04'),
+(200, '/nsg_bangladesh/', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', '', '2026-10-29 09:35:07'),
+(201, '/nsg_bangladesh/about.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/', '2026-10-29 09:35:10'),
+(202, '/nsg_bangladesh/careers.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/about.php', '2026-10-29 09:35:13'),
+(203, '/nsg_bangladesh/people.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/careers.php', '2026-10-29 09:35:15'),
+(204, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 09:35:16'),
+(205, '/nsg_bangladesh/index.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/board.php', '2026-10-29 09:35:19'),
+(206, '/nsg_bangladesh/index.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/board.php', '2026-10-29 09:37:08'),
+(207, '/nsg_bangladesh/about.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/index.php', '2026-10-29 09:37:19'),
+(208, '/nsg_bangladesh/careers.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/about.php', '2026-10-29 09:37:32'),
+(209, '/nsg_bangladesh/people.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/careers.php', '2026-10-29 09:37:35'),
+(210, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 09:37:41'),
+(211, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:04:41'),
+(212, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:11:12'),
+(213, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:15:40'),
+(214, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:15:54'),
+(215, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:21:17'),
+(216, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:22:28'),
+(217, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:22:44'),
+(218, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:30:05'),
+(219, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:30:42'),
+(220, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:30:43'),
+(221, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:31:27'),
+(222, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:32:10'),
+(223, '/nsg_bangladesh/index.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/board.php', '2026-10-29 10:32:27'),
+(224, '/nsg_bangladesh/index.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/index.php', '2026-10-29 10:32:47'),
+(225, '/nsg_bangladesh/people.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/index.php', '2026-10-29 10:32:59'),
+(226, '/nsg_bangladesh/index.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:33:28'),
+(227, '/nsg_bangladesh/index.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/index.php', '2026-10-29 10:33:40'),
+(228, '/nsg_bangladesh/about.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/index.php', '2026-10-29 10:33:44'),
+(229, '/nsg_bangladesh/careers.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/about.php', '2026-10-29 10:33:50'),
+(230, '/nsg_bangladesh/people.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/careers.php', '2026-10-29 10:34:03'),
+(231, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:34:22'),
+(232, '/nsg_bangladesh/board.php', '5a41009e2091433389152de64a75e7dcf4a4498666c24aacbe409637075d9e64', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', 'http://localhost/nsg_bangladesh/people.php', '2026-10-29 10:34:51');
 
 -- --------------------------------------------------------
 
@@ -325,13 +358,41 @@ CREATE TABLE `board_members` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `full_name` varchar(160) NOT NULL,
   `title` varchar(160) NOT NULL,
+  `board_group` varchar(120) NOT NULL DEFAULT 'US Leadership Board',
+  `group_order` int(11) NOT NULL DEFAULT 1,
+  `hierarchy_level` int(11) NOT NULL DEFAULT 1,
   `biography` text DEFAULT NULL,
   `photo_path` varchar(500) DEFAULT NULL,
   `message` text DEFAULT NULL,
   `status` enum('draft','published','archived') NOT NULL DEFAULT 'draft',
   `sort_order` int(11) NOT NULL DEFAULT 0,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `card_bg_color` varchar(20) DEFAULT '#ffffff',
+  `card_border_color` varchar(20) DEFAULT '#b71c1c',
+  `border_style` varchar(20) DEFAULT 'solid',
+  `border_width` int(11) DEFAULT 2,
+  `show_border` tinyint(1) DEFAULT 1,
+  `text_color` varchar(20) DEFAULT '#111111',
+  `card_radius` int(11) DEFAULT 8,
+  `card_shadow` varchar(50) DEFAULT '0 4px 16px rgba(0,0,0,0.04)',
+  `photo_shape` varchar(20) DEFAULT '50%',
+  `font_family` varchar(100) DEFAULT 'Playfair Display, serif',
+  `name_size` varchar(20) DEFAULT '1.4rem',
+  `title_size` varchar(20) DEFAULT '0.8rem',
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `board_members`
+--
+
+INSERT INTO `board_members` (`id`, `full_name`, `title`, `board_group`, `group_order`, `hierarchy_level`, `biography`, `photo_path`, `message`, `status`, `sort_order`, `created_at`, `card_bg_color`, `card_border_color`, `border_style`, `border_width`, `show_border`, `text_color`, `card_radius`, `card_shadow`, `photo_shape`, `font_family`, `name_size`, `title_size`, `updated_at`) VALUES
+(1, 'Mr. Noor', 'President & Founder', 'US Leadership Board', 1, 1, 'Since 2003, Mr. Noor has been the individual owner and president of Noor Inc., a privately held umbrella company headquartered in New York City. The company oversees a national portfolio of staffing, recruiting, and healthcare service brands.\r\n\r\nCornerstone to Mr. Noor’s success in the industry is his acquisition track record and proven ability to integrate and grow acquired brands. Mr. Noor’s investment strategy is to build and strengthen a diverse portfolio of brands. He leverages the unique talents and advantages of acquired companies while enabling them to maintain their unique brand identity and leadership.\r\n\r\nHis vision for Bangladesh is both strategic and personal. As a proud native of the country, he is committed to creating long-term, high-quality career opportunities for local talent while strengthening the operational backbone of his US-based portfolio.\r\n\r\nThe Bangladesh office and operations reflect his belief that global success is built on trusted people, thoughtful investment, and a deep connection to one’s roots.', 'assets/leader-placeholder.jpg', 'Global success is built on trusted people, thoughtful investment, and a deep connection to one’s roots.', 'published', 1, '2026-10-29 09:37:06', '#ffffff', '#b71c1c', 'solid', 2, 1, '#111111', 8, '0 4px 16px rgba(0,0,0,0.04)', '50%', 'Playfair Display, serif', '1.4rem', '0.8rem', '2026-10-29 16:25:15'),
+(2, 'Sarah Jenkins', 'Managing Director of Operations', 'US Leadership Board', 1, 2, 'Sarah brings over 18 years of global workforce management experience, overseeing operational alignment between US client demands and Bangladesh execution hubs.', 'assets/leader-placeholder.jpg', 'Operational synergy is achieved through clear communication and shared goals.', 'published', 2, '2026-10-29 09:37:06', '#ffffff', '#b71c1c', 'solid', 2, 1, '#111111', 8, '0 4px 16px rgba(0,0,0,0.04)', '50%', 'Playfair Display, serif', '1.4rem', '0.8rem', '2026-10-29 16:25:15'),
+(3, 'Michael Vance', 'Head of Offshore Recruitment', 'US Leadership Board', 1, 2, 'Tariq manages talent acquisition pipelines across Bangladesh, ensuring offshore team members meet top-tier US staffing requirements.', 'assets/leader-placeholder.jpg', 'Connecting local talent with global opportunity drives continuous growth.', 'published', 3, '2026-10-29 09:37:06', '#ffffff', '#b71c1c', 'solid', 2, 1, '#111111', 8, '0 4px 16px rgba(0,0,0,0.04)', '50%', 'Playfair Display, serif', '1.4rem', '0.8rem', '2026-10-29 16:25:15'),
+(4, 'Tariq Rahman', 'Head of Offshore Operations', 'BD Leadership Board', 2, 1, 'Manages local leadership, client services, and team expansion in Bangladesh.', 'assets/leader-placeholder.jpg', 'Empowering local talent for global impact.', 'published', 2, '2026-10-29 10:04:36', '#ffffff', '#b71c1c', 'solid', 2, 0, '#111111', 8, '0 4px 16px rgba(0,0,0,0.04)', '50%', 'Playfair Display, serif', '1.4rem', '0.8rem', '2026-10-29 16:34:49'),
+(5, 'Nusrat Chowdhury', 'Director of Recruitment', 'BD Leadership Board', 2, 2, 'Directs talent acquisition pipelines across IT, finance, and operational teams.', 'assets/leader-placeholder.jpg', 'Building high-performing teams.', 'published', 2, '2026-10-29 10:04:36', '#ffffff', '#b71c1c', 'solid', 2, 1, '#111111', 8, '0 4px 16px rgba(0,0,0,0.04)', '50%', 'Playfair Display, serif', '1.4rem', '0.8rem', '2026-10-29 16:32:04'),
+(6, 'Tanvir Hossain', 'Head of Technical Support', 'BD Leadership Board', 2, 2, 'Ensures IT infrastructure compliance and offshore technical readiness.', 'assets/leader-placeholder.jpg', 'Seamless digital operations.', 'published', 2, '2026-10-29 10:04:36', '#ffffff', '#b71c1c', 'solid', 2, 1, '#111111', 8, '0 4px 16px rgba(0,0,0,0.04)', '50%', 'Playfair Display, serif', '1.4rem', '0.8rem', '2026-10-29 16:32:08');
 
 -- --------------------------------------------------------
 
@@ -350,6 +411,14 @@ CREATE TABLE `contact_messages` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `contact_messages`
+--
+
+INSERT INTO `contact_messages` (`id`, `name`, `email`, `subject`, `message`, `ip_hash`, `status`, `created_at`) VALUES
+(1, 'Rafiqul Islam', 'rafiq@example.com', 'Inquiry regarding US Recruiting roles', 'Hello, I am interested in applying for the Senior US Technical Recruiter position. Please let me know the interview timeline.', NULL, 'new', '2026-10-29 09:37:06'),
+(2, 'American Health Services', 'info@ushealth.org', 'Partnership Opportunity', 'We would like to discuss offshore credentialing support for our medical staffing operations.', NULL, 'read', '2026-10-29 09:37:06');
+
 -- --------------------------------------------------------
 
 --
@@ -365,6 +434,14 @@ CREATE TABLE `employee_memories` (
   `status` enum('draft','published','archived') NOT NULL DEFAULT 'draft',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee_memories`
+--
+
+INSERT INTO `employee_memories` (`id`, `title`, `event_date`, `caption`, `photo_path`, `status`, `created_at`) VALUES
+(1, 'Annual Innovation Summit 2026', '2026-08-15', 'Dhaka team members participating in global workflow optimization workshops.', 'assets/office-wall.png', 'published', '2026-10-29 09:37:06'),
+(2, 'Cultural Day Celebration', '2026-03-26', 'Celebrating local heritage and unity across our Dhaka office team.', 'assets/office-wall.png', 'published', '2026-10-29 09:37:06');
 
 -- --------------------------------------------------------
 
@@ -384,6 +461,14 @@ CREATE TABLE `employee_of_month` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `employee_of_month`
+--
+
+INSERT INTO `employee_of_month` (`id`, `name`, `role`, `month_label`, `quote`, `photo_path`, `status`, `sort_order`, `created_at`) VALUES
+(1, 'Anik Chowdhury', 'Lead US Recruiter', 'October 2026', 'Dedicated teamwork and real-time US collaboration make every challenge achievable.', 'assets/leader-placeholder.jpg', 'published', 1, '2026-10-29 09:37:06'),
+(2, 'Nusrat Jahan', 'Senior Payroll Analyst', 'September 2026', 'Accuracy and attention to detail ensure our offshore operations run flawlessly.', 'assets/leader-placeholder.jpg', 'published', 2, '2026-10-29 09:37:06');
+
 -- --------------------------------------------------------
 
 --
@@ -402,6 +487,14 @@ CREATE TABLE `employee_stories` (
   `published_at` datetime DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee_stories`
+--
+
+INSERT INTO `employee_stories` (`id`, `title`, `slug`, `excerpt`, `body`, `featured_media_id`, `status`, `is_featured`, `published_at`, `created_at`) VALUES
+(1, 'Growing Global Careers from Dhaka', 'growing-global-careers-from-dhaka', 'How NSG Bangladesh offers local professionals direct access to US staffing industry expertise.', '<p>At NSG Bangladesh, career growth goes beyond local boundaries. Our team members work directly alongside US executives, gaining international business exposure every single day.</p>', NULL, 'published', 1, '2026-10-29 15:37:06', '2026-10-29 09:37:06'),
+(2, 'Inside Our Annual Team Excellence Awards', 'inside-our-annual-team-excellence-awards', 'Celebrating outstanding performance and dedication across our offshore operations team.', '<p>We recognized top performers across recruiting, analytics, and back-office operations during our annual team celebration in Dhaka.</p>', NULL, 'published', 0, '2026-10-29 15:37:06', '2026-10-29 09:37:06');
 
 -- --------------------------------------------------------
 
@@ -445,6 +538,16 @@ CREATE TABLE `jobs` (
   `created_by` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `title`, `slug`, `location`, `employment_type`, `department`, `summary`, `description`, `salary_min`, `salary_max`, `currency`, `closing_date`, `status`, `is_featured`, `published_at`, `created_at`, `updated_at`, `created_by`) VALUES
+(1, 'Senior US Technical Recruiter', 'senior-us-technical-recruiter', 'Dhaka, Bangladesh', 'Full-time', 'Talent Acquisition', 'Seeking an experienced IT Recruiter to manage full-cycle recruitment for US tech clients during US Eastern working hours.', '<h3>Job Description</h3><p>As a Senior US Technical Recruiter at NSG Bangladesh, you will lead sourcing and screening strategies for high-volume technical roles across North America.</p><h4>Key Responsibilities:</h4><ul><li>Source candidates via LinkedIn Recruiter, Monster, and Dice.</li><li>Conduct initial phone screens during US business hours.</li><li>Manage candidate pipelines and ATS documentation.</li></ul>', 60000.00, 90000.00, 'BDT', '2026-12-31', 'published', 1, '2026-10-29 15:37:06', '2026-10-29 15:37:06', '2026-10-29 15:37:06', 1),
+(2, 'Healthcare Placement Specialist', 'healthcare-placement-specialist', 'Dhaka, Bangladesh', 'Full-time', 'Healthcare Staffing', 'Focus on credentialing and placing registered nurses and healthcare professionals for US medical facilities.', '<h3>Job Description</h3><p>Manage healthcare credentialing, compliance, and schedule matching for contingent US clinical workers.</p>', 50000.00, 75000.00, 'BDT', '2026-12-31', 'published', 1, '2026-10-29 15:37:06', '2026-10-29 15:37:06', '2026-10-29 15:37:06', 1),
+(3, 'Operations Analytics Associate', 'operations-analytics-associate', 'Dhaka, Bangladesh', 'Full-time', 'Data & Analytics', 'Analyze workforce productivity metrics and build custom executive reporting dashboards for US umbrella brands.', '<h3>Job Description</h3><p>Extract operational datasets, build PowerBI/Excel dashboards, and provide weekly KPI tracking for executive management.</p>', 45000.00, 65000.00, 'BDT', '2026-12-31', 'published', 0, '2026-10-29 15:37:06', '2026-10-29 15:37:06', '2026-10-29 15:37:06', 1),
+(4, 'Payroll & Compliance Coordinator', 'payroll-compliance-coordinator', 'Dhaka, Bangladesh', 'Full-time', 'Finance & Payroll', 'Audit timecards, process US multi-state payroll calculations, and verify tax compliance for contingent staff.', '<h3>Job Description</h3><p>Ensure timely and accurate payroll processing across 46 US states in full regulatory compliance.</p>', 48000.00, 70000.00, 'BDT', '2026-12-31', 'published', 0, '2026-10-29 15:37:06', '2026-10-29 15:37:06', '2026-10-29 15:37:06', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -464,6 +567,14 @@ CREATE TABLE `job_applications` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `job_applications`
+--
+
+INSERT INTO `job_applications` (`id`, `job_id`, `full_name`, `email`, `phone`, `cover_letter`, `cv_path`, `status`, `consent_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Tanvir Ahmed', 'tanvir@example.com', '+8801711223344', 'I have 4 years of experience sourcing US IT talent.', 'uploads/documents/cv_tanvir.pdf', 'reviewing', '2026-10-29 15:37:06', '2026-10-29 09:37:06', '2026-10-29 09:37:06'),
+(2, 2, 'Farhana Yesmin', 'farhana@example.com', '+8801811223344', 'Experienced in US healthcare compliance and nursing credentialing.', 'uploads/documents/cv_farhana.pdf', 'shortlisted', '2026-10-29 15:37:06', '2026-10-29 09:37:06', '2026-10-29 09:37:06');
 
 -- --------------------------------------------------------
 
@@ -579,11 +690,11 @@ INSERT INTO `page_sections` (`id`, `page_slug`, `section_key`, `content_type`, `
 (17, 'about', 'about_vision_color', 'color', '#444444', NULL, '2026-10-27 22:15:00'),
 (52, 'index', 'hero_title', 'text', 'Operational excellence with global impact', NULL, '2026-10-28 13:51:46'),
 (53, 'index', 'hero_title_color', 'color', '#ffffff', NULL, '2026-10-28 13:51:46'),
-(54, 'index', 'hero_title_size', 'text', '3.5rem', NULL, '2026-10-28 13:51:46'),
-(55, 'index', 'hero_image', 'image', 'uploads/images/home_img_6ae1f7c80a7a65.83946799.webp', NULL, '2026-10-28 13:51:46'),
+(54, 'index', 'hero_title_size', 'text', '4.8rem', NULL, '2026-10-29 09:37:06'),
+(55, 'index', 'hero_image', 'image', 'assets/hero-city.jpg', NULL, '2026-10-29 09:37:06'),
 (56, 'index', 'home_about_heading', 'text', 'Noor Staffing Group in Bangladesh', NULL, '2026-10-28 13:51:46'),
-(57, 'index', 'home_about_body', '', 'Noor Staffing Group, part of the Noor Inc. group of companies, supports its nationwide US staffing and workforce solutions through a dedicated offshore support team based in Bangladesh. \r\n\r\nWhile NSG\'s primary services—staffing, recruiting, and workforce solutions—are delivered across the United States, the Bangladesh team plays a pivotal role in supporting these endeavors. This strategic offshore hub enhances our capabilities, ensuring seamless service delivery to our diverse clientele and extending our commitment to excellence.\r\n\r\nThe Team\r\n\r\nBangladesh is home to NSG’s growing team of talented professionals who contribute to core business functions like recruiting and sales support, research, analytics, and back office operations. Working closely with our US-based teams, they help keep things running smoothly and efficiently.\r\n\r\nBy operating in alignment with US business hours, they ensure real-time collaboration with our stateside teams. This synergy enables NSG to maintain its reputation for responsive and efficient service, meeting the dynamic needs of clients across industries such as healthcare, government, professional services, light industrial, and hospitality.', NULL, '2026-10-28 13:51:46'),
-(58, 'index', 'about_section_image', 'image', 'uploads/images/home_img_6ae1fa35dd1b65.00740847.webp', NULL, '2026-10-28 13:51:46'),
+(57, 'index', 'home_about_body', '', 'Noor Staffing Group, part of the Noor, Inc. group of companies, supports its nationwide US staffing and workforce solutions through a dedicated offshore support team based in Bangladesh.', NULL, '2026-10-29 09:37:06'),
+(58, 'index', 'about_section_image', 'image', 'assets/dhaka-city.jpg', NULL, '2026-10-29 09:37:06'),
 (59, 'index', 'cta_heading', 'text', 'Take the first step toward your dreams.', NULL, '2026-10-28 13:51:46'),
 (60, 'index', 'cta_button_label', 'text', 'SUBMIT YOUR RESUME', NULL, '2026-10-28 13:51:46'),
 (61, 'index', 'stat_1', 'text', '20+ Years in operation', NULL, '2026-10-28 13:51:46'),
@@ -592,7 +703,7 @@ INSERT INTO `page_sections` (`id`, `page_slug`, `section_key`, `content_type`, `
 (64, 'index', 'stat_4', 'text', '22 specialized brands under the Noor, Inc. portfolio', NULL, '2026-10-28 13:51:46'),
 (65, 'index', 'stat_5', 'text', '6,000+ contingent workers actively employed nationwide', NULL, '2026-10-28 13:51:46'),
 (66, 'index', 'vision_quote', 'text', 'Driven by talent and built on trust.', NULL, '2026-10-28 13:51:46'),
-(67, 'index', 'vision_bg_image', 'image', 'uploads/images/bd-flag-bg.jpg', NULL, '2026-10-28 13:51:46'),
+(67, 'index', 'vision_bg_image', 'image', 'assets/bd-flag-bg.jpg', NULL, '2026-10-29 09:37:06'),
 (68, 'index', 'exp_1_icon', 'text', '👥', NULL, '2026-10-28 13:51:46'),
 (69, 'index', 'exp_1_title', 'text', 'Staffing Solutions', NULL, '2026-10-28 13:51:46'),
 (70, 'index', 'exp_1_body', '', 'Providing fast, reliable staffing support by connecting businesses with pre-vetted talent.', NULL, '2026-10-28 13:51:46'),
@@ -609,8 +720,8 @@ INSERT INTO `page_sections` (`id`, `page_slug`, `section_key`, `content_type`, `
 (81, 'index', 'culture_body', '', 'At NSG Bangladesh, we are building more than just an offshore support team. We are creating a place where talented professionals can grow, contribute, and be part of something bigger.', NULL, '2026-10-28 13:51:46'),
 (82, 'index', 'office_wall_image', 'image', 'assets/office-wall.png', NULL, '2026-10-28 13:51:46'),
 (154, 'index', 'leader_name', 'text', 'Mr. Noor', NULL, '2026-10-28 13:51:46'),
-(155, 'index', 'leader_photo', 'image', 'uploads/images/home_img_6ae1fbc2f02282.68521468.webp', NULL, '2026-10-28 13:51:46'),
-(156, 'index', 'leader_speech', '', 'Since 2003, Mr. Noor has been the individual owner and president of Noor Inc., a privately held umbrella company headquartered in New York City. The company oversees a national portfolio of staffing, recruiting and healthcare service brands.\r\n\r\nCornerstone to Mr. Noor’s success in the industry is his acquisition track record and proven ability to integrate and grow acquired brands. Mr. Noor’s investment strategy is to build and strengthen a diverse portfolio of brands. He leverages the unique talents and advantages of acquired companies while enabling them to maintain their unique brand identity and leadership. \r\n\r\nHis vision for Bangladesh is both strategic and personal. As a proud native of the country, he is committed to creating long-term, high-quality career opportunities for local talent while strengthening the operational backbone of his US-based portfolio. \r\n\r\nThe Bangladesh office and operations reflect his belief that global success is built on trusted people, thoughtful investment, and a deep connection to one’s roots.', NULL, '2026-10-28 13:51:46');
+(155, 'index', 'leader_photo', 'image', 'assets/leader-placeholder.jpg', NULL, '2026-10-29 09:37:06'),
+(156, 'index', 'leader_speech', '', 'Since 2003, Mr. Noor has been the individual owner and president of Noor Inc., a privately held umbrella company headquartered in New York City.', NULL, '2026-10-29 09:37:06');
 
 -- --------------------------------------------------------
 
@@ -629,7 +740,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`key`, `value`, `updated_at`) VALUES
-('contact_address', '', '2026-10-28 20:22:59'),
+('contact_address', 'Dhaka, Bangladesh', '2026-10-29 15:37:06'),
 ('contact_address_bn', 'ঢাকা, বাংলাদেশ', '2026-10-28 19:23:47'),
 ('contact_email', 'contact@noorstaffing.com', '2026-10-28 20:22:59'),
 ('contact_map_embed_url', '', '2026-10-28 19:23:47'),
@@ -637,7 +748,7 @@ INSERT INTO `settings` (`key`, `value`, `updated_at`) VALUES
 ('default_seo_description', 'Connecting global businesses with high-value placement and staffing solutions in Bangladesh.', '2026-10-28 19:23:47'),
 ('default_seo_title', 'Noor Staffing Group | Offshore Workforce Solutions', '2026-10-28 19:23:47'),
 ('facebook_url', 'https://www.facebook.com/', '2026-10-28 20:22:59'),
-('head_office_address', '', '2026-10-28 20:22:59'),
+('head_office_address', 'New York City, NY, USA', '2026-10-29 15:37:06'),
 ('head_office_address_bn', 'নিউ ইয়র্ক সিটি, নিউ ইয়র্ক, যুক্তরাষ্ট্র', '2026-10-28 19:23:47'),
 ('instagram_url', 'https://www.instagram.com/', '2026-10-28 20:22:59'),
 ('linkedin_url', 'https://www.linkedin.com/feed/', '2026-10-28 20:22:59'),
@@ -885,37 +996,37 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `analytics_visits`
 --
 ALTER TABLE `analytics_visits`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=233;
 
 --
 -- AUTO_INCREMENT for table `board_members`
 --
 ALTER TABLE `board_members`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `contact_messages`
 --
 ALTER TABLE `contact_messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `employee_memories`
 --
 ALTER TABLE `employee_memories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `employee_of_month`
 --
 ALTER TABLE `employee_of_month`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `employee_stories`
 --
 ALTER TABLE `employee_stories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `entity_translations`
@@ -927,13 +1038,13 @@ ALTER TABLE `entity_translations`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `job_applications`
 --
 ALTER TABLE `job_applications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `media`
@@ -957,7 +1068,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `page_sections`
 --
 ALTER TABLE `page_sections`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=278;
 
 --
 -- AUTO_INCREMENT for table `site_settings`
