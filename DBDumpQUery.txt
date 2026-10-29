@@ -1,0 +1,137 @@
+START TRANSACTION;
+
+-- --------------------------------------------------------
+-- 1. Insert Pages Meta
+-- --------------------------------------------------------
+INSERT INTO `pages` (`id`, `title`, `slug`, `seo_title`, `seo_description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Home Page', 'index', 'Noor Staffing Group | Offshore Workforce Solutions', 'Connecting global businesses with high-value placement and staffing solutions in Bangladesh.', 'published', NOW(), NOW()),
+(2, 'About Us Page', 'about', 'About Us | Noor Staffing Group', 'Learn more about Noor Staffing Group and our Bangladesh operations.', 'published', NOW(), NOW())
+ON DUPLICATE KEY UPDATE `title` = VALUES(`title`);
+
+-- --------------------------------------------------------
+-- 2. Insert Page Sections (Home & About Content)
+-- --------------------------------------------------------
+INSERT INTO `page_sections` (`page_slug`, `section_key`, `content_type`, `content_value`, `updated_at`) VALUES
+('index', 'hero_title', 'text', 'Operational excellence with global impact', NOW()),
+('index', 'hero_title_color', 'color', '#ffffff', NOW()),
+('index', 'hero_title_size', 'text', '4.8rem', NOW()),
+('index', 'hero_image', 'image', 'assets/hero-city.jpg', NOW()),
+('index', 'home_about_heading', 'text', 'Noor Staffing Group in Bangladesh', NOW()),
+('index', 'home_about_body', 'text', 'Noor Staffing Group, part of the Noor, Inc. group of companies, supports its nationwide US staffing and workforce solutions through a dedicated offshore support team based in Bangladesh.', NOW()),
+('index', 'about_section_image', 'image', 'assets/dhaka-city.jpg', NOW()),
+('index', 'cta_heading', 'text', 'Take the first step toward your dreams.', NOW()),
+('index', 'cta_button_label', 'text', 'SUBMIT YOUR RESUME', NOW()),
+('index', 'leader_name', 'text', 'Mr. Noor', NOW()),
+('index', 'leader_photo', 'image', 'assets/leader-placeholder.jpg', NOW()),
+('index', 'leader_speech', 'text', 'Since 2003, Mr. Noor has been the individual owner and president of Noor Inc., a privately held umbrella company headquartered in New York City.', NOW()),
+('index', 'stat_1', 'text', '20+ Years in operation', NOW()),
+('index', 'stat_2', 'text', '14 US offices supporting clients in 46 states', NOW()),
+('index', 'stat_3', 'text', '250+ corporate staff in the U.S. and 100+ team members in Bangladesh', NOW()),
+('index', 'stat_4', 'text', '22 specialized brands under the Noor, Inc. portfolio', NOW()),
+('index', 'stat_5', 'text', '6,000+ contingent workers actively employed nationwide', NOW()),
+('index', 'vision_quote', 'text', 'Driven by talent and built on trust.', NOW()),
+('index', 'vision_bg_image', 'image', 'assets/bd-flag-bg.jpg', NOW()),
+('index', 'exp_1_icon', 'text', '👥', NOW()),
+('index', 'exp_1_title', 'text', 'Staffing Solutions', NOW()),
+('index', 'exp_1_body', 'text', 'Providing fast, reliable staffing support by connecting businesses with pre-vetted talent.', NOW()),
+('index', 'exp_2_icon', 'text', '📄', NOW()),
+('index', 'exp_2_title', 'text', 'Recruitment Services', NOW()),
+('index', 'exp_2_body', 'text', 'Our experienced recruiters partner closely with clients to identify and hire top-tier professionals.', NOW()),
+('index', 'exp_3_icon', 'text', '🧮', NOW()),
+('index', 'exp_3_title', 'text', 'Payroll & Employer Services', NOW()),
+('index', 'exp_3_body', 'text', 'Handling complex payroll processes to ensure full compliance, reduce risk, and simplify administration.', NOW()),
+('index', 'exp_4_icon', 'text', '⚙️', NOW()),
+('index', 'exp_4_title', 'text', 'Workforce Management', NOW()),
+('index', 'exp_4_body', 'text', 'Offering comprehensive workforce solutions that include oversight, compliance, and transparent reporting.', NOW())
+ON DUPLICATE KEY UPDATE `content_value` = VALUES(`content_value`);
+
+-- --------------------------------------------------------
+-- 3. Insert Site Settings (Global Branding & Theme)
+-- --------------------------------------------------------
+INSERT INTO `settings` (`key`, `value`, `updated_at`) VALUES
+('site_name', 'Noor Staffing Group', NOW()),
+('site_logo', 'uploads/images/site_logo_1793197379.webp', NOW()),
+('logo_width', '280', NOW()),
+('contact_email', 'contact@noorstaffing.com', NOW()),
+('contact_phone', '+880 1700-000000', NOW()),
+('contact_address', 'Dhaka, Bangladesh', NOW()),
+('head_office_address', 'New York City, NY, USA', NOW()),
+('linkedin_url', 'https://www.linkedin.com/feed/', NOW()),
+('facebook_url', 'https://www.facebook.com/', NOW()),
+('instagram_url', 'https://www.instagram.com/', NOW()),
+('theme_primary_color', '#B71C1C', NOW()),
+('theme_accent_color', '#B71C1C', NOW())
+ON DUPLICATE KEY UPDATE `value` = VALUES(`value`);
+
+-- --------------------------------------------------------
+-- 4. Insert Navigation Menu Items
+-- --------------------------------------------------------
+INSERT INTO `navigation_items` (`id`, `parent_id`, `label`, `url`, `sort_order`, `is_active`) VALUES
+(1, NULL, 'Home', 'index.php', 1, 1),
+(2, NULL, 'About Us', 'about.php', 2, 1),
+(3, NULL, 'Careers', 'careers.php', 3, 1),
+(4, NULL, 'Our People', 'people.php', 4, 1),
+(5, NULL, 'Leadership', 'board.php', 5, 1),
+(6, NULL, 'Contact', 'contact.php', 6, 1)
+ON DUPLICATE KEY UPDATE `label` = VALUES(`label`);
+
+-- --------------------------------------------------------
+-- 5. Insert Leadership / Board Members
+-- --------------------------------------------------------
+INSERT INTO `board_members` (`id`, `full_name`, `title`, `biography`, `photo_path`, `message`, `status`, `sort_order`) VALUES
+(1, 'Mr. Noor', 'President & Founder', 'Since 2003, Mr. Noor has been the individual owner and president of Noor Inc., a privately held umbrella company headquartered in New York City. The company oversees a national portfolio of staffing, recruiting, and healthcare service brands.\r\n\r\nCornerstone to Mr. Noor’s success in the industry is his acquisition track record and proven ability to integrate and grow acquired brands. Mr. Noor’s investment strategy is to build and strengthen a diverse portfolio of brands. He leverages the unique talents and advantages of acquired companies while enabling them to maintain their unique brand identity and leadership.\r\n\r\nHis vision for Bangladesh is both strategic and personal. As a proud native of the country, he is committed to creating long-term, high-quality career opportunities for local talent while strengthening the operational backbone of his US-based portfolio.\r\n\r\nThe Bangladesh office and operations reflect his belief that global success is built on trusted people, thoughtful investment, and a deep connection to one’s roots.', 'assets/leader-placeholder.jpg', 'Global success is built on trusted people, thoughtful investment, and a deep connection to one’s roots.', 'published', 1),
+(2, 'Sarah Jenkins', 'Managing Director of Operations', 'Sarah brings over 18 years of global workforce management experience, overseeing operational alignment between US client demands and Bangladesh execution hubs.', 'assets/leader-placeholder.jpg', 'Operational synergy is achieved through clear communication and shared goals.', 'published', 2),
+(3, 'Tariq Rahman', 'Head of Offshore Recruitment', 'Tariq manages talent acquisition pipelines across Bangladesh, ensuring offshore team members meet top-tier US staffing requirements.', 'assets/leader-placeholder.jpg', 'Connecting local talent with global opportunity drives continuous growth.', 'published', 3)
+ON DUPLICATE KEY UPDATE `full_name` = VALUES(`full_name`);
+
+-- --------------------------------------------------------
+-- 6. Insert Jobs
+-- --------------------------------------------------------
+INSERT INTO `jobs` (`id`, `title`, `slug`, `location`, `employment_type`, `department`, `summary`, `description`, `salary_min`, `salary_max`, `currency`, `closing_date`, `status`, `is_featured`, `published_at`, `created_at`, `updated_at`, `created_by`) VALUES
+(1, 'Senior US Technical Recruiter', 'senior-us-technical-recruiter', 'Dhaka, Bangladesh', 'Full-time', 'Talent Acquisition', 'Seeking an experienced IT Recruiter to manage full-cycle recruitment for US tech clients during US Eastern working hours.', '<h3>Job Description</h3><p>As a Senior US Technical Recruiter at NSG Bangladesh, you will lead sourcing and screening strategies for high-volume technical roles across North America.</p><h4>Key Responsibilities:</h4><ul><li>Source candidates via LinkedIn Recruiter, Monster, and Dice.</li><li>Conduct initial phone screens during US business hours.</li><li>Manage candidate pipelines and ATS documentation.</li></ul>', 60000.00, 90000.00, 'BDT', '2026-12-31', 'published', 1, NOW(), NOW(), NOW(), 1),
+(2, 'Healthcare Placement Specialist', 'healthcare-placement-specialist', 'Dhaka, Bangladesh', 'Full-time', 'Healthcare Staffing', 'Focus on credentialing and placing registered nurses and healthcare professionals for US medical facilities.', '<h3>Job Description</h3><p>Manage healthcare credentialing, compliance, and schedule matching for contingent US clinical workers.</p>', 50000.00, 75000.00, 'BDT', '2026-12-31', 'published', 1, NOW(), NOW(), NOW(), 1),
+(3, 'Operations Analytics Associate', 'operations-analytics-associate', 'Dhaka, Bangladesh', 'Full-time', 'Data & Analytics', 'Analyze workforce productivity metrics and build custom executive reporting dashboards for US umbrella brands.', '<h3>Job Description</h3><p>Extract operational datasets, build PowerBI/Excel dashboards, and provide weekly KPI tracking for executive management.</p>', 45000.00, 65000.00, 'BDT', '2026-12-31', 'published', 0, NOW(), NOW(), NOW(), 1),
+(4, 'Payroll & Compliance Coordinator', 'payroll-compliance-coordinator', 'Dhaka, Bangladesh', 'Full-time', 'Finance & Payroll', 'Audit timecards, process US multi-state payroll calculations, and verify tax compliance for contingent staff.', '<h3>Job Description</h3><p>Ensure timely and accurate payroll processing across 46 US states in full regulatory compliance.</p>', 48000.00, 70000.00, 'BDT', '2026-12-31', 'published', 0, NOW(), NOW(), NOW(), 1)
+ON DUPLICATE KEY UPDATE `title` = VALUES(`title`);
+
+-- --------------------------------------------------------
+-- 7. Insert Job Applications
+-- --------------------------------------------------------
+INSERT INTO `job_applications` (`id`, `job_id`, `full_name`, `email`, `phone`, `cover_letter`, `cv_path`, `status`, `consent_at`, `created_at`) VALUES
+(1, 1, 'Tanvir Ahmed', 'tanvir@example.com', '+8801711223344', 'I have 4 years of experience sourcing US IT talent.', 'uploads/documents/cv_tanvir.pdf', 'reviewing', NOW(), NOW()),
+(2, 2, 'Farhana Yesmin', 'farhana@example.com', '+8801811223344', 'Experienced in US healthcare compliance and nursing credentialing.', 'uploads/documents/cv_farhana.pdf', 'shortlisted', NOW(), NOW())
+ON DUPLICATE KEY UPDATE `full_name` = VALUES(`full_name`);
+
+-- --------------------------------------------------------
+-- 8. Insert Employee Stories
+-- --------------------------------------------------------
+INSERT INTO `employee_stories` (`id`, `title`, `slug`, `excerpt`, `body`, `status`, `is_featured`, `published_at`, `created_at`) VALUES
+(1, 'Growing Global Careers from Dhaka', 'growing-global-careers-from-dhaka', 'How NSG Bangladesh offers local professionals direct access to US staffing industry expertise.', '<p>At NSG Bangladesh, career growth goes beyond local boundaries. Our team members work directly alongside US executives, gaining international business exposure every single day.</p>', 'published', 1, NOW(), CURRENT_TIMESTAMP),
+(2, 'Inside Our Annual Team Excellence Awards', 'inside-our-annual-team-excellence-awards', 'Celebrating outstanding performance and dedication across our offshore operations team.', '<p>We recognized top performers across recruiting, analytics, and back-office operations during our annual team celebration in Dhaka.</p>', 'published', 0, NOW(), CURRENT_TIMESTAMP)
+ON DUPLICATE KEY UPDATE `title` = VALUES(`title`);
+
+-- --------------------------------------------------------
+-- 9. Insert Employee of the Month
+-- --------------------------------------------------------
+INSERT INTO `employee_of_month` (`id`, `name`, `role`, `month_label`, `quote`, `photo_path`, `status`, `sort_order`) VALUES
+(1, 'Anik Chowdhury', 'Lead US Recruiter', 'October 2026', 'Dedicated teamwork and real-time US collaboration make every challenge achievable.', 'assets/leader-placeholder.jpg', 'published', 1),
+(2, 'Nusrat Jahan', 'Senior Payroll Analyst', 'September 2026', 'Accuracy and attention to detail ensure our offshore operations run flawlessly.', 'assets/leader-placeholder.jpg', 'published', 2)
+ON DUPLICATE KEY UPDATE `name` = VALUES(`name`);
+
+-- --------------------------------------------------------
+-- 10. Insert Contact Messages
+-- --------------------------------------------------------
+INSERT INTO `contact_messages` (`id`, `name`, `email`, `subject`, `message`, `status`) VALUES
+(1, 'Rafiqul Islam', 'rafiq@example.com', 'Inquiry regarding US Recruiting roles', 'Hello, I am interested in applying for the Senior US Technical Recruiter position. Please let me know the interview timeline.', 'new'),
+(2, 'American Health Services', 'info@ushealth.org', 'Partnership Opportunity', 'We would like to discuss offshore credentialing support for our medical staffing operations.', 'read')
+ON DUPLICATE KEY UPDATE `name` = VALUES(`name`);
+
+-- --------------------------------------------------------
+-- 11. Insert Employee Photo Gallery Memories
+-- --------------------------------------------------------
+INSERT INTO `employee_memories` (`id`, `title`, `event_date`, `caption`, `photo_path`, `status`) VALUES
+(1, 'Annual Innovation Summit 2026', '2026-08-15', 'Dhaka team members participating in global workflow optimization workshops.', 'assets/office-wall.png', 'published'),
+(2, 'Cultural Day Celebration', '2026-03-26', 'Celebrating local heritage and unity across our Dhaka office team.', 'assets/office-wall.png', 'published')
+ON DUPLICATE KEY UPDATE `title` = VALUES(`title`);
+
+COMMIT;
